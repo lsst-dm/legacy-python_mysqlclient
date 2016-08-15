@@ -1,0 +1,10 @@
+diff -u -ur mysqlclient-1.3.7.orig/setup.py mysqlclient-1.3.7/setup.py
+--- mysqlclient-1.3.7.orig/setup.py
++++ mysqlclient-1.3.7/setup.py
+@@ -18,4 +18,5 @@
+ metadata['ext_modules'] = [
+     setuptools.Extension(sources=['_mysql.c'], **options)]
+ metadata['long_description'] = metadata['long_description'].replace(r'\n', '')
++metadata['zip_safe'] = False
+ setuptools.setup(**metadata)
+
